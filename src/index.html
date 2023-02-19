@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <meta http-equiv="Content-Security-Policy" content="script-src 'self';" /> -->
+    <title>Practice</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/js/all.min.js"
+      integrity="sha512-8pHNiqTlsrRjVD4A/3va++W1sMbUHwWxxRPWNyVlql3T+Hgfd81Qc6FC5WMXDC+tSauxxzp1tgiAvSKFu1qIlA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.1/css/bootstrap.min.css"
+      integrity="sha512-siwe/oXMhSjGCwLn+scraPOWrJxHlUgMBMZXdPe2Tnk3I0x3ESCoLz7WZ5NTH6SZrywMY+PB1cjyqJ5jAluCOg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <h1 style="font-weight: bold">Electron App</h1>
+    <div class="container mt-5">
+      <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-md-8">
+          <form id="regForm">
+            <h1 id="register">Survey</h1>
+            <div class="all-steps" id="all-steps">
+              <span class="step"><i class="fa fa-user"></i></span>
+              <span class="step"><i class="fa fa-map-marker"></i></span>
+              <span class="step"><i class="fa fa-shopping-bag"></i></span>
+              <span class="step"><i class="fa fa-car"></i></span>
+              <span class="step"><i class="fab fa-spotify"></i></span>
+              <span class="step"><i class="fa fa-mobile-phone"></i></span>
+            </div>
+
+            <div class="tab">
+              <h6>What's your name?</h6>
+              <p>
+                <input
+                  placeholder="Name.."
+                  oninput="this.className = ''"
+                  name="fname"
+                />
+              </p>
+            </div>
+            <div class="tab">
+              <h6>What's your Location?</h6>
+              <p>
+                <input
+                  placeholder="City.."
+                  oninput="this.className = ''"
+                  name="city"
+                />
+              </p>
+            </div>
+            <div class="tab">
+              <h6>What's your Favorite Shopping Website?</h6>
+              <p>
+                <input
+                  placeholder="Favorite Shopping Website.."
+                  oninput="this.className = ''"
+                  name="site"
+                />
+              </p>
+            </div>
+            <div class="tab">
+              <h6>What's your Favorite car?</h6>
+              <p>
+                <input
+                  placeholder="Favorite car.."
+                  oninput="this.className = ''"
+                  name="car"
+                />
+              </p>
+            </div>
+            <div class="tab">
+              <h6>What's your Favorite Song?</h6>
+              <p>
+                <input
+                  placeholder="Favorite Song.."
+                  oninput="this.className = ''"
+                  name="song"
+                />
+              </p>
+            </div>
+            <div class="tab">
+              <h6>What's your Favorite Mobile brand?</h6>
+              <p>
+                <input
+                  placeholder="Favorite Mobile Brand.."
+                  oninput="this.className = ''"
+                  name="mobile"
+                />
+              </p>
+            </div>
+            <div class="thanks-message text-center" id="text-message">
+              <img
+                src="https://i.imgur.com/O18mJ1K.png"
+                width="100"
+                class="mb-4"
+              />
+              <h3>Thank you for your feedback.</h3>
+              <span>It helps us to improve on many levels.</span>
+            </div>
+            <div style="overflow: auto" id="nextprevious">
+              <div style="float: right">
+                <button type="button" id="prevBtn" onclick="nextPrev(-1)">
+                  <i class="fa fa-angle-double-left"></i>
+                </button>
+                <button type="button" id="nextBtn" onclick="nextPrev(1)">
+                  <i class="fa fa-angle-double-right"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+          <div>
+            <a
+              style="
+                text-decoration: none;
+                position: absolute;
+                color: brown;
+                font-weight: bold;
+                margin-top: 20px;
+                transition: all 300ms ease-in-out;
+              "
+              class="btn"
+              href="#"
+              onclick="location.reload()"
+              >Reload Page</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script defer src="./render.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/idb@7/build/umd.js"></script>
+</html>
